@@ -33,19 +33,24 @@
         </div>
     </div>
     <script>
-        let heading = document.querySelectorAll("h2")
+        let heading =document.querySelectorAll("h2")
+        let anch =document.querySelectorAll("a")
         // console.log()
         // console.log(heading)
         // console.log(heading)
         for(let i=0;i<heading.length;i++){
             heading[i].onclick = ()=>{
                 heading[i].style.opacity="0"
-                heading[i].nextElementSibling.style="opacity: 0;"
-                event.preventDefault();
+                heading[i].nextElementSibling.style.opacity="0"
                 heading[i].parentElement.lastElementChild.style="display:block; color:black"
-
             }
-            
+            anch[i].onclick= ()=>{
+                event.preventDefault();
+                anch[i].style.display="none"
+                anch[i].previousElementSibling.style.opacity="1"
+                anch[i].parentElement.firstElementChild.style.opacity="1"
+            }
+
         }
     </script>
 </body>
