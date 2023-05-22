@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traversal Assignment</title>
+    <link rel="stylesheet" href="Ta.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="boxes">
+            <div class="box">
+                <h2>box 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, minus harum aspernatur, illum natus obcaecati saepe aliquam maiores pariatur vitae error ea provident expedita. Cumque voluptates iure id voluptatibus odio.</p>
+                <a href="">Show Box</a>
+            </div>
+            <div class="box">
+                <h2>box 2</h2>
+                <p>Pariatur, officia! Voluptate nulla maiores ullam sequi incidunt laborum, ducimus et debitis, illum vitae fuga! Dignissimos aspernatur laboriosam dolore fugit, accusantium ratione maxime consectetur laborum facere. Amet, labore? Quo, obcaecati?</p>
+                <a href="">Show Box</a>
+            </div>
+            <div class="box">
+                <h2>box 3</h2>
+                <p>Dolore ea reiciendis debitis harum vel ab beatae eveniet, repellat unde veritatis, corporis, iste est velit tenetur. Ex alias repellendus blanditiis eos eveniet harum aut sapiente, repellat nemo adipisci minima!</p>
+                <a href="">Show Box</a>
+            </div>
+            <div class="box">
+                <h2>box 4</h2>
+                <p>Quidem enim laborum eum, quod vitae numquam fugit nam, consequuntur tempore voluptate deserunt iste, facilis culpa quos assumenda aut expedita optio consectetur. Expedita obcaecati, dignissimos sapiente quas pariatur eos temporibus.</p>
+                <a href="">Show Box</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let heading = document.querySelectorAll("h2")
+        // console.log()
+        // console.log(heading)
+        // console.log(heading)
+        for(let i=0;i<heading.length;i++){
+            heading[i].onclick = ()=>{
+                heading[i].style.opacity="0"
+                heading[i].nextElementSibling.style="opacity: 0;"
+                event.preventDefault();
+                heading[i].parentElement.lastElementChild.style="display:block; color:black"
+
+            }
+            
+        }
+    </script>
+</body>
+</html>
